@@ -5,16 +5,16 @@ import csv
 filename = 'students.csv'
 
 students = [
-    (1, 'Alice', 101, 'A'),
-    (2, 'Bob', 102, 'A'),
-    (3, 'Charlie', 103, 'B'),
-    (4, 'David', 104, 'B'),
-    (5, 'Eve', 105, 'C'),
-    (6, 'Frank', 106, 'C'),
-    (7, 'Grace', 107, 'A'),
-    (8, 'Heidi', 108, 'B'),
-    (9, 'Ivan', 109, 'C'),
-    (10, 'Judy', 110, 'A'),
+    (1, 'Jay', 101, 'A'),
+    (2, 'Virat', 102, 'A'),
+    (3, 'Krunal', 103, 'B'),
+    (4, 'Dev', 104, 'B'),
+    (5, 'Adi', 105, 'C'),
+    (6, 'Ajay', 106, 'C'),
+    (7, 'Harsh', 107, 'A'),
+    (8, 'Devanshu', 108, 'B'),
+    (9, 'Vinit', 109, 'C'),
+    (10, 'Vidhan', 110, 'A'),
 ]
 with open(filename, mode='w', newline='') as file:
     writer = csv.writer(file)
