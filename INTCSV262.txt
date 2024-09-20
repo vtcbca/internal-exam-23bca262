@@ -2,18 +2,32 @@
 Id:-262
 
 import csv
-with open('exam.csv', 'w', newline='') as file:
+filename = 'students.csv'
+
+students = [
+    (1, 'Alice', 101, 'A'),
+    (2, 'Bob', 102, 'A'),
+    (3, 'Charlie', 103, 'B'),
+    (4, 'David', 104, 'B'),
+    (5, 'Eve', 105, 'C'),
+    (6, 'Frank', 106, 'C'),
+    (7, 'Grace', 107, 'A'),
+    (8, 'Heidi', 108, 'B'),
+    (9, 'Ivan', 109, 'C'),
+    (10, 'Judy', 110, 'A'),
+]
+with open(filename, mode='w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(['sid', 'sname', 'seatno', 'blocknumber'])
-    writer.writerows([
-        ['1', 'Raja', '1', 'A'],
-        ['2', 'mohit', '2', 'B'],
-        ['3', 'jay', '3', 'A'],
-        ['4', 'abhay', '4', 'B'],
-        ['5', 'Sonia', '5', 'A'],
-        ['6', 'nilay', '6', 'B'],
-        ['7', 'Komal', '7', 'A'],
-        ['8', 'Gaurav', '8', 'B'],
-        ['9', 'tony', '9', 'A'],
-        ['10', 'miral', '10', 'B']
-    ])
+    writer.writerow(['sid', 'sname', 'seatno', 'blocknumber'])  # Header
+    writer.writerows(students)
+    import csv
+from collections import defaultdict
+block_count = defaultdict(int)
+
+with open(filename, mode='r') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        block_count[row['blocknumber']] += 1
+
+for block, count in block_count.items():
+    print(f'Block {block}: {count} student(s)')
