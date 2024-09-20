@@ -1,0 +1,20 @@
+5. Create csv file exam(sid,sname, seatno, blocknumber) using writer object with 10 records. Read this file and count students per block.
+Id:-262
+
+import csv
+import csv
+with open('exam.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['sid', 'sname', 'seatno', 'blocknumber'])
+    writer.writerows([
+        ['1', 'Raja', '1', 'A'],
+        ['2', 'mohit', '2', 'B'],
+        ['3', 'jay', '3', 'A'],
+        ['4', 'abhay', '4', 'B'],
+        ['5', 'Sonia', '5', 'A'],
+        ['6', 'nilay', '6', 'B'],
+        ['7', 'Komal', '7', 'A'],
+        ['8', 'Gaurav', '8', 'B'],
+        ['9', 'tony', '9', 'A'],
+        ['10', 'miral', '10', 'B']
+    ]
