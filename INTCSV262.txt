@@ -16,4 +16,4 @@ with open('exam.csv', 'w', newline='') as file:
         ['8', 'Gaurav', '8', 'B'],
         ['9', 'tony', '9', 'A'],
         ['10', 'miral', '10', 'B']
-    ]
+    ])
