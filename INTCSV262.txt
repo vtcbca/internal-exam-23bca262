@@ -2,7 +2,6 @@
 Id:-262
 
 import csv
-import csv
 with open('exam.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['sid', 'sname', 'seatno', 'blocknumber'])
