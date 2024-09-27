@@ -31,3 +31,9 @@ with open(filename, mode='r') as file:
 
 for block, count in block_count.items():
     print(f'Block {block}: {count} student(s)')
+
+OUTPUT:-
+Block A: 4 student(s)
+Block B: 3 student(s)
+Block C: 3 student(s)
+​
